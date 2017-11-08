@@ -3,17 +3,17 @@ bitTag = 5;
 dado = 3;
 
 
-linha00 = [None] * 9
-linha01 = [None] * 9
-linha10 = [None] * 9
-linha11 = [None] * 9
 
-tag = [None] * 4
+
+tag = [None] * 5
 
 result = ''
 countMiss = 0
 countHit = 0
-menos = 0
+count=1;
+primeira = True
+aux = False
+
 for x in range(0, len(lines)):
 
     hexa = lines[x]
@@ -21,14 +21,34 @@ for x in range(0, len(lines)):
     palavra = hexa[int(bitTag): int(dado) + int(bitTag)]
     print("tag", tg, "palavra", palavra)
 
-    for i in range (0, len(tag)): #PROCURA NA MEMORIA ASSOCIATIVA
+
+    for i in range (0, len(tag)):
         if tag[i] == tg:
             print ("HIT")
-
-        if tag[i] == None:
-            tag[i] = tg
-            menos = 0
-            print ("MISS")
-
+            result += " HIT"
+            aux = True
+            break
         else:
-            tag[menos] = tg
+            if tag[i] == None:
+                tag[i] = tg
+                print("MISS")
+                result += " MISS"
+                aux = True
+                break
+
+
+    if aux == False:
+        tag[count] = tg
+        print("MISS")
+        result += " MISS"
+        if count == 4:
+            count = 0
+        else:
+            count += 1
+
+
+    aux=False
+print(tag[0],tag[1],tag[2],tag[3],tag[4])
+print (result)
+
+
