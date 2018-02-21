@@ -1,6 +1,8 @@
 # OrgArg
 
-1 - verificar acessos a memoria do código em assembly cleo
+Elaborar código assembly do processador cleópatra
+
+1 - verificar acessos a memoria do código em assembly
 
 2 - Converter acessos a memoria de hexa para binario
 
