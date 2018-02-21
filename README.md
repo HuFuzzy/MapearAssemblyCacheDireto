@@ -1,6 +1,10 @@
 # OrgArg
 
-* Converter acessos a memoria de hexa para binario
+1 - verificar acessos a memoria do código em assembly cleo
+
+2 - Converter acessos a memoria de hexa para binario
+
+3 - Realizar mapeamento de cache para os acessos a memoria 
 
 * Mapeamento direto, com 3 bits para tag, 2 bits para linha e 3 bits
   para palavra (cache com 4 linhas, 8 palavras por linha)
